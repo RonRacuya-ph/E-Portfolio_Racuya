@@ -1,0 +1,260 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 100px; 
+    scroll-behavior: smooth; 
+}
+
+body{
+    color: white;
+    background-color:cornflowerblue;
+}
+
+.logo{
+    font-family:arial;
+    font-weight:bolder;
+    padding:20px;
+    color:aquamarine;
+}
+
+.span_name{
+    color:blue;
+}
+
+.nav_bar {
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:3rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    word-spacing:5px;
+    text-align:center;
+    justify-content: space-between;
+    max-width: auto;
+    z-index: 1000;
+    overflow:hidden;
+}
+
+.nav_bar a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav_bar a:hover{
+    color:aquamarine;
+}
+
+.main_header{
+    display:flex;
+    max-width:100%;
+    height:auto;
+    background-color:midnightblue;
+    top:0;
+    position:sticky;
+    overflow:hidden;
+}
+
+.home{
+    display:flex;
+    align-self: center;
+    align-items:center;
+    flex-direction: row;
+    position:center;
+    justify-content: center;
+    padding-top:200px;
+    height:50vh;
+    margin:0 auto;
+    gap:50px;
+}
+
+.intro{
+    display:flex;
+    flex:1;
+    position:center;
+    text-align:right;
+    font-size: 2rem;
+    max-width:600px;
+}
+
+.mypic{
+    width:250px;
+    height:250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about{
+    position:center;
+    margin-top:50vh;
+    font-size:1.5em;
+    margin-left:auto;
+    margin-right:auto;
+    height:50vh;
+}
+
+.about_title{
+    text-align: center;
+    position:center;
+    margin-bottom:50px;
+}
+
+.about_description{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    position:center;
+    align-content:center;
+    margin:0 auto;
+    padding:0 5rem;
+}
+
+.skills{
+    position:center;
+    margin-top:50vh;
+    margin-left:auto;
+    margin-right:auto;
+    height:50vh;
+    font-size: 1.5rem;
+}
+
+.skills_title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.skills_content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap:10px;
+    justify-content: center;
+}
+
+/*Needs to edit more about skill box*/
+.skill_box{
+    display:flex;
+    padding:10px;
+    flex-direction: column;
+    background-color: skyblue;
+    align-items: center;
+    border:solid black;
+    width:200px;
+    height:auto;
+    text-align:center;
+    justify-content:center;
+    border-radius:10px;
+}
+
+.skill_pic{
+    width:100px;
+    height:100px;
+    object-fit: contain;
+    margin:5px;
+}
+
+.skill_name{
+    margin-top:20px;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.projects{
+    text-align: center;
+    position:center;
+    margin-top: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    height:50vh;
+}
+
+.projects_title{
+    text-align:center;
+    position:center;
+}
+
+.contacts{
+    text-align: center;
+    margin-top:50vh;
+    margin-left: auto;
+    margin-right: auto;
+    height:70vh;
+    padding-left:20%;
+    padding-right:20%;
+}
+
+.contacts_title{
+    text-align:center;
+    margin-bottom:50px;
+    justify-content: center;
+}
+
+.contacts_form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contacts_name_input, .contacts_email_input{
+    padding:15px;
+}
+
+.contacts_message{
+    padding-top:20px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:30vh;
+}
+
+.button_submit{
+    align-self: center;
+    justify-content: center;
+    width:100px;
+    height:50px;
+    border-radius:10px;
+}
+
+.other_contacts{
+    padding:3rem;
+}
+
+.other_contacts_grid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.contacts_pic{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin:20px;
+}
+
+.resume{
+    text-align: center;
+    margin-top:50vh;
+    margin-left: auto;
+    margin-right: auto;
+    height:50vh;
+}
+
+.footer{
+    display:flex;
+    padding-top:20px;
+    padding-bottom:120px;
+    justify-content:center;
+    background-color:navy;
+}
+
+.footer h2{
+    color:white;
+}
