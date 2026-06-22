@@ -107,8 +107,8 @@ a {
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2rem;
+  gap: 0.5rem;
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -135,6 +135,8 @@ a {
   display: flex;
   list-style: none;
   gap: 0.25rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-link {
@@ -447,6 +449,7 @@ a {
   border: 1.5px solid #90b8e8;
   border-radius: var(--radius);
   padding: 1.75rem;
+  overflow: hidden;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
@@ -461,10 +464,23 @@ a {
   opacity: 0.65;
 }
 
-.project-icon {
-  font-size: 1.8rem;
-  color: var(--accent);
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
   margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  pointer-events: none;
+  user-select: none;
 }
 
 .project-card h3 {
@@ -691,7 +707,10 @@ a {
 
   .hamburger { display: flex; }
 
+  /* On mobile, nav-links no longer need to flex-push things right */
   .nav-links {
+    flex: unset;
+    margin-right: 0;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -702,6 +721,11 @@ a {
     border-bottom: 1px solid rgba(77, 208, 225, 0.3);
     padding: 1rem;
     gap: 0.25rem;
+  }
+
+  /* Push theme-toggle + hamburger to the far right on mobile */
+  .theme-toggle {
+    margin-left: auto;
   }
 
   .nav-links.open { display: flex; }
@@ -831,7 +855,7 @@ svg.fa-icon {
   border-color: #58a6ff;
 }
 
-[data-theme="dark"] . span {
+[data-theme="dark"] .span {
   background: rgba(88, 166, 255, 0.12);
   color: #58a6ff;
 }
@@ -916,7 +940,6 @@ svg.fa-icon {
   cursor: pointer;
   color: #f0f6ff;
   transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
-  margin-left: 0.5rem;
   flex-shrink: 0;
 }
 
